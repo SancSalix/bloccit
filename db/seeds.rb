@@ -20,6 +20,16 @@ require 'random_data'
  
  unique_post.comments.find_or_create_by!(body: "Testing comments as well")
  
+  10.times do
+   Advertisement.create!(
+     title: RandomData.random_sentence,
+     body: RandomData.random_sentence,
+     price: rand(10...500)
+   )
+ end
+ 
+ 
  puts "Seed finished"
  puts "#{Post.count} posts created"
  puts "#{Comment.count} comments created"
+ puts "#{Advertisement.count} ads created"
