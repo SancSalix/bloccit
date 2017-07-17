@@ -45,6 +45,15 @@ require 'random_data'
    )
  end
  
+   30.times do
+   SponsoredPost.create!(
+     topic:  topics.sample,
+     title: RandomData.random_sentence,
+     body: RandomData.random_sentence,
+     price: rand(10...500)
+   )
+ end
+ 
  
  puts "Seed finished"
  puts "#{Topic.count} topics created"
@@ -52,3 +61,4 @@ require 'random_data'
  puts "#{Comment.count} comments created"
  puts "#{Advertisement.count} ads created"
  puts "#{Question.count} questions created"
+ puts "#{SponsoredPost.count} sponsored posts created"

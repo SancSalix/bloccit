@@ -11,7 +11,7 @@
        </div>
        <div class="form-group">
          <%= advert.label :price %>
-         <%= advert.text_area :price, rows: 8, class: 'form-control', placeholder: "Enter ad price" %>
+         <%= advert.number_field :price, class: 'form-control', placeholder: "Enter ad price" %>
        </div>
        <div class="form-group">
          <%= advert.submit "Save", class: 'btn btn-success' %>
