@@ -18,7 +18,7 @@ require 'random_data'
  end
  posts = Post.all
  
- unique_post = Post.find_or_create_by!(title: "Testing post", body:"Shelby is testing posts")
+ unique_post = Post.find_or_create_by!(topic: topics.sample, title: "Testing post", body:"Shelby is testing posts")
  
  100.times do
    Comment.create!(
