@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+    has_many :posts
+    
     before_save { self.email = email.downcase if email.present? }
     before_save :capitalize_user
     validates :name, length: { minimum: 1, maximum: 100 }, presence: true
