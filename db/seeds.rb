@@ -77,6 +77,13 @@ require 'random_data'
    password: 'helloworld'
  )
  
+  mod = User.create!(
+   name:     'Mod User',
+   email:    'mod@example.com',
+   password: 'helloworld',
+   role:     'moderator'
+ )
+ 
  
  puts "Seed finished"
  puts "#{User.count} users created"
