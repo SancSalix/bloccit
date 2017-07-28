@@ -1,6 +1,9 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
+/* ...
+*= require_self
+*= require_tree .
+*/
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
  .user-info {
    margin-top: 9px;
  }
@@ -8,3 +11,4 @@
  .nav {
    margin-top: 5px;
  }
+ 

@@ -7,6 +7,11 @@ class SessionsController < ApplicationController
 
     if user && user.authenticate(params[:session][:password])
       create_session(user)
+      if params[:remember_me]
+        cookies.signed[:user.id] = { value: user.id, expires: 2.weeks.from_now }
+      else
+        cookies.signed[:user_id] = user.id
+      end
       flash[:notice] = "Welcome, #{user.name}!"
       redirect_to root_path
     else
