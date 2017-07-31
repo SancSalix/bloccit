@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
        flash[:notice] = "Comment saved successfully."
        redirect_to [@post.topic, @post]
      else
-       flash[:alert] = "Comment failed to save."
+       flash[:alert] = comment.errors.full_messages.to_sentence
        redirect_to [@post.topic, @post]
      end
    end
