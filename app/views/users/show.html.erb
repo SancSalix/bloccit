@@ -18,9 +18,28 @@
      </div>
    </div>
  </div>
- 
+ <div class="media-left">
  <h2>Posts</h2>
+ <% if user_has_posts? %>
  <%= render @user.posts %>
- 
+ <% else %>
+ <p>No posts exist</p>
+ <% end %>
  <h2>Comments</h2>
+  <% if user_has_comments? %>
  <%= render @user.comments %>
+ <% else %>
+ <p>No comments exist</p>
+ <% end %>
+
+
+<h2>Favorites</h2>
+  <% if @user.favorites %>
+    <% @user.favorites.each do |fave|%>
+      <p><%=  image_tag fave.post.user.avatar_url(48) %><%=  link_to fave.post.title, topic_post_path(fave.post.topic, fave.post) %> 
+      <small>Comments: <%=  fave.post.comments.count %> Votes: <%=  fave.post.points %></small></p>
+      <% end %>
+  <% else %>
+    <h3> No favorites exist</h3>
+  <% end %>
+ </div>

@@ -47,4 +47,6 @@ class Post < ActiveRecord::Base
        FavoriteMailer.new_post(self).deliver_now
    end
    
+       
+   
 end
