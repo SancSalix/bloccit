@@ -36,7 +36,7 @@
 <h2>Favorites</h2>
   <% if @user.favorites %>
     <% @user.favorites.each do |fave|%>
-      <p><%=  image_tag fave.post.user.avatar_url(48) %><%=  link_to fave.post.title, topic_post_path(fave.post.topic, fave.post) %> 
+      <p><%=  link_to (image_tag fave.post.user.avatar_url(48)), user_path(fave.post.user) %><%=  link_to fave.post.title, topic_post_path(fave.post.topic, fave.post) %> 
       <small>Comments: <%=  fave.post.comments.count %> Votes: <%=  fave.post.points %></small></p>
       <% end %>
   <% else %>
