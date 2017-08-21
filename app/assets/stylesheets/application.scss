@@ -2,8 +2,20 @@
 *= require_self
 *= require_tree .
 */
+
+
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ 
+ body {
+  color: #361f66
+ }
+ 
+ a {
+  color: #4c13c4;
+ }
+ 
  .user-info {
    margin-top: 9px;
  }

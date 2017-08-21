@@ -1,29 +1,26 @@
  <br>
  <div class="jumbotron">
-   <h1>Bloccit</h1>
-   <p>Bloccit is a resource for sharing links with your friends!</p>
+   <h1>Nameless City</h1>
+   <p>“That is not dead which can eternal lie, And with strange aeons even death may die.” <sub>HP Lovecraft</sub></p>
        
        <% if current_user %>
        <div class="current">
-           <%= current_user.name %>
+           <sub><p><%= current_user.name %> wanders dreaming</p></sub>
            </div>
-         <% else %>
-           <%= link_to "Sign In", new_session_path %> or
-           <%= link_to "Sign Up", new_user_path, class: 'btn btn-primary' %> today!
        <% end %>
  </div>
  
- <div class="row">
+ <div class="points row">
    <div class="col-md-4">
-     <h2>Solves world hunger</h2>
-     <p>Bloccit will deliver food and water to those in need, all over the world.</p>
+     <h2>The Old Ones</h2>
+     <p>In his house at R'lyeh dead Cthulhu waits dreaming</p>
    </div>
    <div class="col-md-4">
-     <h2>Eliminates poverty</h2>
-     <p>Bloccit will deliver money and education to those in need, all over the world.</p>
+     <h2>King in Yellow</h2>
+     <p>Have you found the Yellow Sign? Have you found the Yellow Sign? Have you found the Yellow Sign?</p>
    </div>
    <div class="col-md-4">
-     <h2>Makes you better looking</h2>
-     <p>Bloccit will make you better looking: it's scientifically proven to make men look like Ryan Gosling and women look like Shakira.</p>
+     <h2 class="glitch" data-text="Truth">Truth</h2>
+     <p>Where does madness leave off and reality begin?</p>
    </div>
  </div>
